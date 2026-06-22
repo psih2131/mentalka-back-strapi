@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_reviews",
+  "info": {
+    "singularName": "page-review",
+    "pluralName": "page-reviews",
+    "displayName": "Page reviews"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "subtitle_section": {
+      "type": "string"
+    },
+    "Reviews_banner_v1": {
+      "type": "component",
+      "component": "shared.banner-v1",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

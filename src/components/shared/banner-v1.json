@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_banner_v1s",
+  "info": {
+    "displayName": "banner_v1",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "title_sec": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email",
+      "default": "naturemind.msk@yandex.ru"
+    }
+  },
+  "config": {}
+}

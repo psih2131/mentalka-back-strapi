@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_advantages_lists",
+  "info": {
+    "displayName": "advantages_list"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_service_price_secs",
+  "info": {
+    "displayName": "service_price_sec"
+  },
+  "options": {},
+  "attributes": {
+    "section_title": {
+      "type": "string"
+    },
+    "section_subtitle": {
+      "type": "text"
+    },
+    "services_price_list": {
+      "type": "component",
+      "component": "shared.service-price-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

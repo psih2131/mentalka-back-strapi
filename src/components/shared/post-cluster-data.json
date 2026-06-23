@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_post_cluster_data",
+  "info": {
+    "displayName": "post_cluster_data"
+  },
+  "options": {},
+  "attributes": {
+    "cluster_title_nav": {
+      "type": "string"
+    },
+    "cluster_id_nav": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

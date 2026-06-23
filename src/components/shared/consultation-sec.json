@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_shared_consultation_secs",
+  "info": {
+    "displayName": "consultation_sec"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "consultation_list": {
+      "type": "component",
+      "component": "shared.consultation-item",
+      "repeatable": true
+    },
+    "how_long_title": {
+      "type": "string"
+    },
+    "how_long_text": {
+      "type": "text"
+    },
+    "how_long_img": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "confident_text_title": {
+      "type": "string"
+    },
+    "confident_text": {
+      "type": "text"
+    },
+    "fammily_title": {
+      "type": "string"
+    },
+    "fammily_text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

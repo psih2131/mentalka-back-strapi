@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_directions_hero_secs",
+  "info": {
+    "displayName": "directions_hero_sec"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "button_text_1": {
+      "type": "string"
+    },
+    "button_text_2": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

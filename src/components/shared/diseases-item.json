@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_diseases_items",
+  "info": {
+    "displayName": "Diseases_item"
+  },
+  "options": {},
+  "attributes": {
+    "name_diseases": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

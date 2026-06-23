@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_patology_items",
+  "info": {
+    "displayName": "patology_item"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

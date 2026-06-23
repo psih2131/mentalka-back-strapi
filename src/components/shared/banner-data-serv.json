@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_banner_data_servs",
+  "info": {
+    "displayName": "banner_data_serv"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Не уверены, какая услуга вам подойдёт?"
+    },
+    "text": {
+      "type": "text",
+      "default": "Мы подскажем, к какому специалисту лучше обратиться и уточним стоимость приёма."
+    },
+    "button_text": {
+      "type": "string",
+      "default": "Заполнить заявку"
+    }
+  },
+  "config": {}
+}

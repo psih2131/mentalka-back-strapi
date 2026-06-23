@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_inform_clusters",
+  "info": {
+    "displayName": "inform_cluster"
+  },
+  "options": {},
+  "attributes": {
+    "cluster_title": {
+      "type": "string"
+    },
+    "docs": {
+      "type": "component",
+      "component": "shared.inform-doc",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

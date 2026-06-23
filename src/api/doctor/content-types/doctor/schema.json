@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "doctors",
+  "info": {
+    "singularName": "doctor",
+    "pluralName": "doctors",
+    "displayName": "doctors"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "specialization": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "doctor"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "experience_years": {
+      "type": "decimal"
+    },
+    "small_descriotion": {
+      "type": "text"
+    },
+    "reception_format": {
+      "type": "string",
+      "default": "В клинике",
+      "required": true
+    },
+    "patients": {
+      "type": "string",
+      "default": "Взрослые",
+      "required": true
+    },
+    "service_price": {
+      "type": "component",
+      "component": "shared.doc-price-item",
+      "repeatable": true
+    },
+    "full_description": {
+      "type": "richtext"
+    },
+    "full_specialization": {
+      "type": "text"
+    },
+    "Diseases_item": {
+      "type": "component",
+      "component": "shared.diseases-item",
+      "repeatable": true
+    },
+    "doc_service_list_full": {
+      "type": "component",
+      "component": "shared.doc-service-list-full",
+      "repeatable": true
+    },
+    "education_and_qualifications_list_item": {
+      "type": "component",
+      "component": "shared.education-and-qualifications-list",
+      "repeatable": true
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

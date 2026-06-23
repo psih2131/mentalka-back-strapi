@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_gallery_photos",
+  "info": {
+    "displayName": "gallery_photo"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "video_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

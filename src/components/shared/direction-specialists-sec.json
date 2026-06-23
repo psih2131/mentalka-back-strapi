@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_direction_specialists_secs",
+  "info": {
+    "displayName": "direction_specialists_sec"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "doctors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::doctor.doctor"
+    }
+  },
+  "config": {}
+}

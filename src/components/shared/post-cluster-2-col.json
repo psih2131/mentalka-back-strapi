@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_post_cluster_2_cols",
+  "info": {
+    "displayName": "post_cluster_2_col"
+  },
+  "options": {},
+  "attributes": {
+    "cluster_title_nav": {
+      "type": "component",
+      "component": "shared.post-cluster-data",
+      "repeatable": false
+    },
+    "columns": {
+      "type": "component",
+      "component": "shared.post-col-text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

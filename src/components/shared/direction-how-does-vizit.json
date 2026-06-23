@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_direction_how_does_vizits",
+  "info": {
+    "displayName": "direction_how_does_vizit"
+  },
+  "options": {},
+  "attributes": {
+    "section_title": {
+      "type": "string"
+    },
+    "cards_numbers": {
+      "type": "component",
+      "component": "shared.direction-does-vizit-item",
+      "repeatable": true
+    },
+    "cards_advantages": {
+      "type": "component",
+      "component": "shared.direction-does-vizit-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_inform_docs_secs",
+  "info": {
+    "displayName": "inform_docs_sec"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "text"
+    },
+    "inform_docs_clusters": {
+      "type": "component",
+      "component": "shared.inform-cluster",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

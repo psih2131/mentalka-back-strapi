@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_specialists",
+  "info": {
+    "singularName": "page-specialist",
+    "pluralName": "page-specialists",
+    "displayName": "Page specialists"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "specialists_hero_sec_subtitle": {
+      "type": "string"
+    },
+    "specialists_hero_sec_title": {
+      "type": "string"
+    },
+    "specialists_hero_sec_text": {
+      "type": "text"
+    },
+    "specialists_hero_sec_btn_text_1": {
+      "type": "string"
+    },
+    "specialists_hero_sec_btn_text_2": {
+      "type": "string"
+    },
+    "specialists_doctors_list_sec_title": {
+      "type": "string"
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

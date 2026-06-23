@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_regsinligting_sections",
+  "info": {
+    "displayName": "regsinligting_section"
+  },
+  "options": {},
+  "attributes": {
+    "title_sec": {
+      "type": "string"
+    },
+    "col_1_title": {
+      "type": "string"
+    },
+    "col_1_text": {
+      "type": "string"
+    },
+    "col_1_button_text": {
+      "type": "string"
+    },
+    "col_2_title": {
+      "type": "string"
+    },
+    "regsinligting_pay_item": {
+      "type": "component",
+      "component": "shared.regsinligting-pay-item",
+      "repeatable": true
+    },
+    "col_3_title": {
+      "type": "string"
+    },
+    "col_3_text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

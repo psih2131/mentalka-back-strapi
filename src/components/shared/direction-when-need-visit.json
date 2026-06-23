@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_shared_direction_when_need_visits",
+  "info": {
+    "displayName": "direction_when_need_visit"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "subtitle_sec": {
+      "type": "text"
+    },
+    "image_sec": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "card_text_1": {
+      "type": "string"
+    },
+    "card_text_2": {
+      "type": "string"
+    },
+    "card_text_3": {
+      "type": "string"
+    },
+    "card_text_4": {
+      "type": "string"
+    },
+    "card_text_5": {
+      "type": "string"
+    },
+    "card_text_6": {
+      "type": "string"
+    },
+    "card_text_7": {
+      "type": "string"
+    },
+    "card_text_8": {
+      "type": "string"
+    },
+    "card_text_9": {
+      "type": "string"
+    },
+    "card_text_10": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

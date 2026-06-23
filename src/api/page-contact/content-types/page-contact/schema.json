@@ -1,0 +1,60 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_contacts",
+  "info": {
+    "singularName": "page-contact",
+    "pluralName": "page-contacts",
+    "displayName": "Page contacts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_page": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "address": {
+      "type": "string"
+    },
+    "address_link": {
+      "type": "string"
+    },
+    "time_work": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "phone_link": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "yandex_map_coordinates_dolgota": {
+      "type": "string"
+    },
+    "yandex_map_coordinates_shirota": {
+      "type": "string"
+    },
+    "socials_media_links": {
+      "type": "component",
+      "component": "shared.socials",
+      "repeatable": true
+    },
+    "gallery_photo": {
+      "type": "component",
+      "component": "shared.gallery-photo",
+      "repeatable": true
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

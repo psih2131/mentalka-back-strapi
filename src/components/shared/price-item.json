@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_price_items",
+  "info": {
+    "displayName": "price_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "string",
+      "default": "от 3 500 ₽ / час",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Психиатрия",
+        "Психотерапия",
+        "Неврология",
+        "Эндокринология"
+      ]
+    },
+    "id_request": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

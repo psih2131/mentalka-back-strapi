@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_info_heroes",
+  "info": {
+    "displayName": "info_hero"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "subtitle_text": {
+      "type": "text"
+    },
+    "button_1_text": {
+      "type": "string"
+    },
+    "button_2_text": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

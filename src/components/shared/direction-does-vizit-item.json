@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_direction_does_vizit_items",
+  "info": {
+    "displayName": "direction_does_vizit_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "active_card": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_shared_service_price_items",
+  "info": {
+    "displayName": "service_price_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "result_title": {
+      "type": "string",
+      "default": "Результат консультации"
+    },
+    "result_text": {
+      "type": "text",
+      "default": "Чёткое понимание причин вашего состояния, диагноз (при необходимости) и определённый план лечения для стабилизации психоэмоционального состояния."
+    },
+    "price_from": {
+      "type": "string",
+      "default": "от 4 000 ₽"
+    },
+    "time_from": {
+      "type": "string",
+      "default": "от 1 часа"
+    },
+    "advantages_list": {
+      "type": "component",
+      "component": "shared.advantages-list",
+      "repeatable": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Психиатрия",
+        "Психотерапия",
+        "Неврология",
+        "Эндокринология"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_informations",
+  "info": {
+    "singularName": "page-information",
+    "pluralName": "page-informations",
+    "displayName": "Page information"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "inform_hero_section": {
+      "type": "component",
+      "component": "shared.info-hero",
+      "repeatable": false
+    },
+    "inform_docs_section": {
+      "type": "component",
+      "component": "shared.inform-docs-sec",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

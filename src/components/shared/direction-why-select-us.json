@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_direction_why_select_uses",
+  "info": {
+    "displayName": "direction_why_select_us"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "advantages": {
+      "type": "component",
+      "component": "shared.direction-why-select-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

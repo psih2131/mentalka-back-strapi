@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "directions",
+  "info": {
+    "singularName": "direction",
+    "pluralName": "directions",
+    "displayName": "directions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "direction_patology_list": {
+      "type": "component",
+      "component": "shared.patology-item",
+      "repeatable": true
+    },
+    "direction_hero_sec": {
+      "type": "component",
+      "component": "shared.directions-hero-sec",
+      "repeatable": false
+    },
+    "direction_when_need_visit_sec": {
+      "type": "component",
+      "component": "shared.direction-when-need-visit",
+      "repeatable": false
+    },
+    "direction_specialists_section": {
+      "type": "component",
+      "component": "shared.direction-specialists-sec",
+      "repeatable": false
+    },
+    "direction_when_need_visit_section": {
+      "type": "component",
+      "component": "shared.direction-how-does-vizit",
+      "repeatable": false
+    },
+    "direction_why_select_us_sec": {
+      "type": "component",
+      "component": "shared.direction-why-select-us",
+      "repeatable": false
+    },
+    "direction_banner_sec": {
+      "type": "component",
+      "component": "shared.banner-data-serv",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

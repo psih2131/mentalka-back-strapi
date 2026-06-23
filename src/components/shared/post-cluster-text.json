@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_post_cluster_texts",
+  "info": {
+    "displayName": "post_cluster_text"
+  },
+  "options": {},
+  "attributes": {
+    "post_cluster_data": {
+      "type": "component",
+      "component": "shared.post-cluster-data",
+      "repeatable": false
+    },
+    "content_text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

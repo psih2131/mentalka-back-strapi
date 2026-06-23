@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_education_and_qualifications_lists",
+  "info": {
+    "displayName": "education_and_qualifications_list"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

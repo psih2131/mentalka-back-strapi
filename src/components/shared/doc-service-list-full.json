@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_doc_service_list_fulls",
+  "info": {
+    "displayName": "doc_service_list_full"
+  },
+  "options": {},
+  "attributes": {
+    "name_service": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_doc_price_items",
+  "info": {
+    "displayName": "doc_price_item"
+  },
+  "options": {},
+  "attributes": {
+    "name_service": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

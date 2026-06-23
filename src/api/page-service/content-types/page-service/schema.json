@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_services",
+  "info": {
+    "singularName": "page-service",
+    "pluralName": "page-services",
+    "displayName": "Page services"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "service_hero": {
+      "type": "component",
+      "component": "shared.service-hero",
+      "repeatable": false
+    },
+    "direction_sec": {
+      "type": "component",
+      "component": "shared.service-direction-sec",
+      "repeatable": false
+    },
+    "services_price_list_sec": {
+      "type": "component",
+      "component": "shared.service-price-sec",
+      "repeatable": false
+    },
+    "service_consultation_sec": {
+      "type": "component",
+      "component": "shared.consultation-sec",
+      "repeatable": false
+    },
+    "service_regsinligting_section": {
+      "type": "component",
+      "component": "shared.regsinligting-section",
+      "repeatable": false
+    },
+    "service_bunner_sec": {
+      "type": "component",
+      "component": "shared.banner-data-serv",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

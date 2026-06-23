@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_regsinligting_pay_items",
+  "info": {
+    "displayName": "regsinligting_pay_item"
+  },
+  "options": {},
+  "attributes": {
+    "svg": {
+      "type": "text"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

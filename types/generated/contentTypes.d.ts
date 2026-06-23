@@ -440,104 +440,313 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
-  collectionName: 'articles';
+export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
+  collectionName: 'blogs';
   info: {
-    description: 'Create your blog content';
-    displayName: 'Article';
-    pluralName: 'articles';
-    singularName: 'article';
+    displayName: 'blog';
+    pluralName: 'blogs';
+    singularName: 'blog';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
-    blocks: Schema.Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    >;
-    category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
-    cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-      }>;
+    doctor: Schema.Attribute.Relation<'manyToOne', 'api::doctor.doctor'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::article.article'
-    > &
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
+    post_content_constuctor: Schema.Attribute.DynamicZone<
+      ['shared.post-cluster-text', 'shared.post-cluster-2-col']
+    >;
+    post_image: Schema.Attribute.Media<'images'>;
+    post_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title'>;
-    title: Schema.Attribute.String;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    short_description: Schema.Attribute.Text;
+    slug: Schema.Attribute.UID<'post_title'> & Schema.Attribute.Required;
+    time_read_min: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
   };
 }
 
-export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
-  collectionName: 'authors';
+export interface ApiDirectionDirection extends Struct.CollectionTypeSchema {
+  collectionName: 'directions';
   info: {
-    description: 'Create authors for your content';
-    displayName: 'Author';
-    pluralName: 'authors';
-    singularName: 'author';
+    displayName: 'directions';
+    pluralName: 'directions';
+    singularName: 'direction';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
-    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
-    avatar: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    direction_banner_sec: Schema.Attribute.Component<
+      'shared.banner-data-serv',
+      false
+    >;
+    direction_hero_sec: Schema.Attribute.Component<
+      'shared.directions-hero-sec',
+      false
+    >;
+    direction_patology_list: Schema.Attribute.Component<
+      'shared.patology-item',
+      true
+    >;
+    direction_specialists_section: Schema.Attribute.Component<
+      'shared.direction-specialists-sec',
+      false
+    >;
+    direction_when_need_visit_sec: Schema.Attribute.Component<
+      'shared.direction-when-need-visit',
+      false
+    >;
+    direction_when_need_visit_section: Schema.Attribute.Component<
+      'shared.direction-how-does-vizit',
+      false
+    >;
+    direction_why_select_us_sec: Schema.Attribute.Component<
+      'shared.direction-why-select-us',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::direction.direction'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDocsPageDocsPage extends Struct.CollectionTypeSchema {
+  collectionName: 'docs_pages';
+  info: {
+    displayName: 'docs_pages';
+    pluralName: 'docs-pages';
+    singularName: 'docs-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::docs-page.docs-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'>;
+    text_page: Schema.Attribute.RichText;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDoctorDoctor extends Struct.CollectionTypeSchema {
+  collectionName: 'doctors';
+  info: {
+    displayName: 'doctors';
+    pluralName: 'doctors';
+    singularName: 'doctor';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Diseases_item: Schema.Attribute.Component<'shared.diseases-item', true>;
+    doc_service_list_full: Schema.Attribute.Component<
+      'shared.doc-service-list-full',
+      true
+    >;
+    education_and_qualifications_list_item: Schema.Attribute.Component<
+      'shared.education-and-qualifications-list',
+      true
+    >;
+    experience_years: Schema.Attribute.Decimal;
+    full_description: Schema.Attribute.RichText;
+    full_specialization: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::doctor.doctor'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    patients: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0412\u0437\u0440\u043E\u0441\u043B\u044B\u0435'>;
+    photo: Schema.Attribute.Media<'images'>;
+    publishedAt: Schema.Attribute.DateTime;
+    reception_format: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0412 \u043A\u043B\u0438\u043D\u0438\u043A\u0435'>;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    service_price: Schema.Attribute.Component<'shared.doc-price-item', true>;
+    slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
+    small_descriotion: Schema.Attribute.Text;
+    specialization: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageBlogPageBlog extends Struct.SingleTypeSchema {
+  collectionName: 'page_blogs';
+  info: {
+    displayName: 'Page blog';
+    pluralName: 'page-blogs';
+    singularName: 'page-blog';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero_section_button_text_1: Schema.Attribute.String;
+    hero_section_button_text_2: Schema.Attribute.String;
+    hero_section_subtitle: Schema.Attribute.Text;
+    hero_section_title: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-blog.page-blog'
+    > &
+      Schema.Attribute.Private;
+    post_section_title: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageContactPageContact extends Struct.SingleTypeSchema {
+  collectionName: 'page_contacts';
+  info: {
+    displayName: 'Page contacts';
+    pluralName: 'page-contacts';
+    singularName: 'page-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    address_link: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     email: Schema.Attribute.String;
+    gallery_photo: Schema.Attribute.Component<'shared.gallery-photo', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::author.author'
+      'api::page-contact.page-contact'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    phone_link: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    socials_media_links: Schema.Attribute.Component<'shared.socials', true>;
+    text: Schema.Attribute.Text;
+    time_work: Schema.Attribute.String;
+    title_page: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    yandex_map_coordinates_dolgota: Schema.Attribute.String;
+    yandex_map_coordinates_shirota: Schema.Attribute.String;
+  };
+}
+
+export interface ApiPageInformationPageInformation
+  extends Struct.SingleTypeSchema {
+  collectionName: 'page_informations';
+  info: {
+    displayName: 'Page information';
+    pluralName: 'page-informations';
+    singularName: 'page-information';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    inform_docs_section: Schema.Attribute.Component<
+      'shared.inform-docs-sec',
+      false
+    >;
+    inform_hero_section: Schema.Attribute.Component<'shared.info-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-information.page-information'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
   };
 }
 
-export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
-  collectionName: 'categories';
+export interface ApiPagePricePagePrice extends Struct.SingleTypeSchema {
+  collectionName: 'page_prices';
   info: {
-    description: 'Organize your content into categories';
-    displayName: 'Category';
-    pluralName: 'categories';
-    singularName: 'category';
+    displayName: 'Page prices';
+    pluralName: 'page-prices';
+    singularName: 'page-price';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
-    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::category.category'
+      'api::page-price.page-price'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
+    page_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    services: Schema.Attribute.Component<'shared.price-item', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -569,6 +778,90 @@ export interface ApiPageReviewPageReview extends Struct.SingleTypeSchema {
     Seo: Schema.Attribute.Component<'shared.seo', false>;
     subtitle_section: Schema.Attribute.String;
     title_section: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageServicePageService extends Struct.SingleTypeSchema {
+  collectionName: 'page_services';
+  info: {
+    displayName: 'Page services';
+    pluralName: 'page-services';
+    singularName: 'page-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    direction_sec: Schema.Attribute.Component<
+      'shared.service-direction-sec',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-service.page-service'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    service_bunner_sec: Schema.Attribute.Component<
+      'shared.banner-data-serv',
+      false
+    >;
+    service_consultation_sec: Schema.Attribute.Component<
+      'shared.consultation-sec',
+      false
+    >;
+    service_hero: Schema.Attribute.Component<'shared.service-hero', false>;
+    service_regsinligting_section: Schema.Attribute.Component<
+      'shared.regsinligting-section',
+      false
+    >;
+    services_price_list_sec: Schema.Attribute.Component<
+      'shared.service-price-sec',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageSpecialistPageSpecialist
+  extends Struct.SingleTypeSchema {
+  collectionName: 'page_specialists';
+  info: {
+    displayName: 'Page specialists';
+    pluralName: 'page-specialists';
+    singularName: 'page-specialist';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-specialist.page-specialist'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    specialists_doctors_list_sec_title: Schema.Attribute.String;
+    specialists_hero_sec_btn_text_1: Schema.Attribute.String;
+    specialists_hero_sec_btn_text_2: Schema.Attribute.String;
+    specialists_hero_sec_subtitle: Schema.Attribute.String;
+    specialists_hero_sec_text: Schema.Attribute.Text;
+    specialists_hero_sec_title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1162,10 +1455,17 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::article.article': ApiArticleArticle;
-      'api::author.author': ApiAuthorAuthor;
-      'api::category.category': ApiCategoryCategory;
+      'api::blog.blog': ApiBlogBlog;
+      'api::direction.direction': ApiDirectionDirection;
+      'api::docs-page.docs-page': ApiDocsPageDocsPage;
+      'api::doctor.doctor': ApiDoctorDoctor;
+      'api::page-blog.page-blog': ApiPageBlogPageBlog;
+      'api::page-contact.page-contact': ApiPageContactPageContact;
+      'api::page-information.page-information': ApiPageInformationPageInformation;
+      'api::page-price.page-price': ApiPagePricePagePrice;
       'api::page-review.page-review': ApiPageReviewPageReview;
+      'api::page-service.page-service': ApiPageServicePageService;
+      'api::page-specialist.page-specialist': ApiPageSpecialistPageSpecialist;
       'api::review.review': ApiReviewReview;
       'api::reviews-category.reviews-category': ApiReviewsCategoryReviewsCategory;
       'plugin::content-releases.release': PluginContentReleasesRelease;

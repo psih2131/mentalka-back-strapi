@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_consultation_items",
+  "info": {
+    "displayName": "consultation_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

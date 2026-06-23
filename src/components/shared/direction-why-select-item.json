@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_direction_why_select_items",
+  "info": {
+    "displayName": "Direction_why_select_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "active_card": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

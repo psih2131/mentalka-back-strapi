@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_post_col_texts",
+  "info": {
+    "displayName": "post_col_text"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

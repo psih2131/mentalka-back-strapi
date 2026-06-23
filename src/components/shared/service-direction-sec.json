@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_service_direction_secs",
+  "info": {
+    "displayName": "service_direction_sec"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "directions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::direction.direction"
+    }
+  },
+  "config": {}
+}

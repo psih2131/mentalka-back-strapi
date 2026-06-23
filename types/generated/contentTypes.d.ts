@@ -524,6 +524,7 @@ export interface ApiDirectionDirection extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     Seo: Schema.Attribute.Component<'shared.seo', false>;
+    short_description: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -616,6 +617,77 @@ export interface ApiDoctorDoctor extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFooterComponentFooterComponent
+  extends Struct.SingleTypeSchema {
+  collectionName: 'footer_components';
+  info: {
+    displayName: '_footer_component';
+    pluralName: 'footer-components';
+    singularName: 'footer-component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address_1: Schema.Attribute.String;
+    address_2: Schema.Attribute.String;
+    codes: Schema.Attribute.Component<'shared.footer-code', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer-component.footer-component'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images'>;
+    medical_license: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    phone_link: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    time_work: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHeaderComponentHeaderComponent
+  extends Struct.SingleTypeSchema {
+  collectionName: 'header_components';
+  info: {
+    displayName: '_header_component';
+    pluralName: 'header-components';
+    singularName: 'header-component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    header_logo: Schema.Attribute.Media<'images'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::header-component.header-component'
+    > &
+      Schema.Attribute.Private;
+    phone: Schema.Attribute.String;
+    phone_link: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    socials_media: Schema.Attribute.Component<'shared.socials', true>;
+    time_work: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPageBlogPageBlog extends Struct.SingleTypeSchema {
   collectionName: 'page_blogs';
   info: {
@@ -686,6 +758,71 @@ export interface ApiPageContactPageContact extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     yandex_map_coordinates_dolgota: Schema.Attribute.String;
     yandex_map_coordinates_shirota: Schema.Attribute.String;
+  };
+}
+
+export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
+  collectionName: 'page_homes';
+  info: {
+    displayName: 'Page home';
+    pluralName: 'page-homes';
+    singularName: 'page-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    home_about_section: Schema.Attribute.Component<'shared.home-about', false>;
+    home_advantages_section: Schema.Attribute.Component<
+      'shared.home-advantages',
+      false
+    >;
+    home_banner_down_section: Schema.Attribute.Component<
+      'shared.home-banner',
+      false
+    >;
+    home_banner_section: Schema.Attribute.Component<
+      'shared.home-banner',
+      false
+    >;
+    home_blog_section: Schema.Attribute.Component<'shared.home-blog', false>;
+    home_direction_section: Schema.Attribute.Component<
+      'shared.home-directions',
+      false
+    >;
+    home_docs_section: Schema.Attribute.Component<'shared.home-docs', false>;
+    home_doctors_section: Schema.Attribute.Component<
+      'shared.home-doctors',
+      false
+    >;
+    home_faq_section: Schema.Attribute.Component<'shared.home-faq', false>;
+    home_footer_banner_section: Schema.Attribute.Component<
+      'shared.banner-v1',
+      false
+    >;
+    home_hero_section: Schema.Attribute.Component<'shared.home-hero', false>;
+    home_reviews_section: Schema.Attribute.Component<
+      'shared.home-reviews',
+      false
+    >;
+    home_symptoms_section: Schema.Attribute.Component<
+      'shared.home-symptoms',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-home.page-home'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -938,6 +1075,35 @@ export interface ApiReviewsCategoryReviewsCategory
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     reviews: Schema.Attribute.Relation<'oneToMany', 'api::review.review'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSocialsWidgetComponentSocialsWidgetComponent
+  extends Struct.SingleTypeSchema {
+  collectionName: 'socials_widget_components';
+  info: {
+    displayName: '_socials_widget_component';
+    pluralName: 'socials-widget-components';
+    singularName: 'socials-widget-component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::socials-widget-component.socials-widget-component'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    socials_media_links: Schema.Attribute.Component<'shared.socials', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1459,8 +1625,11 @@ declare module '@strapi/strapi' {
       'api::direction.direction': ApiDirectionDirection;
       'api::docs-page.docs-page': ApiDocsPageDocsPage;
       'api::doctor.doctor': ApiDoctorDoctor;
+      'api::footer-component.footer-component': ApiFooterComponentFooterComponent;
+      'api::header-component.header-component': ApiHeaderComponentHeaderComponent;
       'api::page-blog.page-blog': ApiPageBlogPageBlog;
       'api::page-contact.page-contact': ApiPageContactPageContact;
+      'api::page-home.page-home': ApiPageHomePageHome;
       'api::page-information.page-information': ApiPageInformationPageInformation;
       'api::page-price.page-price': ApiPagePricePagePrice;
       'api::page-review.page-review': ApiPageReviewPageReview;
@@ -1468,6 +1637,7 @@ declare module '@strapi/strapi' {
       'api::page-specialist.page-specialist': ApiPageSpecialistPageSpecialist;
       'api::review.review': ApiReviewReview;
       'api::reviews-category.reviews-category': ApiReviewsCategoryReviewsCategory;
+      'api::socials-widget-component.socials-widget-component': ApiSocialsWidgetComponentSocialsWidgetComponent;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

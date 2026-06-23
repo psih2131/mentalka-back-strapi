@@ -20,6 +20,9 @@
       "targetField": "title",
       "required": true
     },
+    "short_description": {
+      "type": "text"
+    },
     "direction_patology_list": {
       "type": "component",
       "component": "shared.patology-item",

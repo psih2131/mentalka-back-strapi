@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_home_directions",
+  "info": {
+    "displayName": "home_directions"
+  },
+  "options": {},
+  "attributes": {
+    "section_title": {
+      "type": "string"
+    },
+    "directions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::direction.direction"
+    }
+  },
+  "config": {}
+}

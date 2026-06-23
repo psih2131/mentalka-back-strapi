@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_home_heroes",
+  "info": {
+    "displayName": "home_hero"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "button_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

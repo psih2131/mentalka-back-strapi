@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_home_banners",
+  "info": {
+    "displayName": "home_banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "button_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

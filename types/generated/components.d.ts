@@ -215,6 +215,27 @@ export interface SharedEducationAndQualificationsList
   };
 }
 
+export interface SharedFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faq_items';
+  info: {
+    displayName: 'faq_item';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFooterCode extends Struct.ComponentSchema {
+  collectionName: 'components_shared_footer_codes';
+  info: {
+    displayName: 'footer_code';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface SharedGalleryPhoto extends Struct.ComponentSchema {
   collectionName: 'components_shared_gallery_photos';
   info: {
@@ -223,6 +244,173 @@ export interface SharedGalleryPhoto extends Struct.ComponentSchema {
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files'>;
     video_link: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeAbout extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_abouts';
+  info: {
+    displayName: 'home_about';
+  };
+  attributes: {
+    button_text: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    text_slider: Schema.Attribute.Component<
+      'shared.home-about-slider-item',
+      true
+    >;
+  };
+}
+
+export interface SharedHomeAboutSliderItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_about_slider_items';
+  info: {
+    displayName: 'home_about_slider_item';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedHomeAdvantages extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_advantages';
+  info: {
+    displayName: 'home_advantages';
+  };
+  attributes: {
+    advantages_list: Schema.Attribute.Component<
+      'shared.home-advantages-item',
+      true
+    >;
+    section_title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeAdvantagesItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_advantages_items';
+  info: {
+    displayName: 'home_advantages_item';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeBanner extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_banners';
+  info: {
+    displayName: 'home_banner';
+  };
+  attributes: {
+    button_text: Schema.Attribute.String;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeBlog extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_blogs';
+  info: {
+    displayName: 'home_blog';
+  };
+  attributes: {
+    blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
+    section_title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeDirections extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_directions';
+  info: {
+    displayName: 'home_directions';
+  };
+  attributes: {
+    directions: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::direction.direction'
+    >;
+    section_title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeDocs extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_docs';
+  info: {
+    displayName: 'home_docs';
+  };
+  attributes: {
+    docs_images: Schema.Attribute.Media<'images', true>;
+    section_slider: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeDoctors extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_doctors';
+  info: {
+    displayName: 'home_doctors';
+  };
+  attributes: {
+    down_text: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeFaq extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_faqs';
+  info: {
+    displayName: 'home_faq';
+  };
+  attributes: {
+    faq_items: Schema.Attribute.Component<'shared.faq-item', true>;
+    section_title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_heroes';
+  info: {
+    displayName: 'home_hero';
+  };
+  attributes: {
+    button_text: Schema.Attribute.String;
+    subtitle: Schema.Attribute.Text;
+    title_section: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeReviews extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_reviews';
+  info: {
+    displayName: 'home_reviews';
+  };
+  attributes: {
+    reviews: Schema.Attribute.Relation<'oneToMany', 'api::review.review'>;
+    section_title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeSymptoms extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_symptoms';
+  info: {
+    displayName: 'home_symptoms';
+  };
+  attributes: {
+    card_1_subtitle: Schema.Attribute.String;
+    card_1_title: Schema.Attribute.String;
+    card_2_subtitle: Schema.Attribute.String;
+    card_2_title: Schema.Attribute.String;
+    card_3_subtitle: Schema.Attribute.String;
+    card_3_title: Schema.Attribute.String;
+    card_4_subtitle: Schema.Attribute.String;
+    card_4_title: Schema.Attribute.String;
+    card_5_subtitle: Schema.Attribute.String;
+    card_5_title: Schema.Attribute.String;
+    card_6_subtitle: Schema.Attribute.String;
+    card_6_title: Schema.Attribute.String;
+    down_button_text: Schema.Attribute.String;
+    title_section: Schema.Attribute.String;
   };
 }
 
@@ -599,7 +787,22 @@ declare module '@strapi/strapi' {
       'shared.doc-price-item': SharedDocPriceItem;
       'shared.doc-service-list-full': SharedDocServiceListFull;
       'shared.education-and-qualifications-list': SharedEducationAndQualificationsList;
+      'shared.faq-item': SharedFaqItem;
+      'shared.footer-code': SharedFooterCode;
       'shared.gallery-photo': SharedGalleryPhoto;
+      'shared.home-about': SharedHomeAbout;
+      'shared.home-about-slider-item': SharedHomeAboutSliderItem;
+      'shared.home-advantages': SharedHomeAdvantages;
+      'shared.home-advantages-item': SharedHomeAdvantagesItem;
+      'shared.home-banner': SharedHomeBanner;
+      'shared.home-blog': SharedHomeBlog;
+      'shared.home-directions': SharedHomeDirections;
+      'shared.home-docs': SharedHomeDocs;
+      'shared.home-doctors': SharedHomeDoctors;
+      'shared.home-faq': SharedHomeFaq;
+      'shared.home-hero': SharedHomeHero;
+      'shared.home-reviews': SharedHomeReviews;
+      'shared.home-symptoms': SharedHomeSymptoms;
       'shared.info-hero': SharedInfoHero;
       'shared.inform-cluster': SharedInformCluster;
       'shared.inform-doc': SharedInformDoc;

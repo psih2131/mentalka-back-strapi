@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_home_advantages_items",
+  "info": {
+    "displayName": "home_advantages_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

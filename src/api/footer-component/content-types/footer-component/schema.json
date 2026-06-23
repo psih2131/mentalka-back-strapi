@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_components",
+  "info": {
+    "singularName": "footer-component",
+    "pluralName": "footer-components",
+    "displayName": "_footer_component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "phone_link": {
+      "type": "string"
+    },
+    "time_work": {
+      "type": "string"
+    },
+    "address_1": {
+      "type": "string"
+    },
+    "address_2": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "codes": {
+      "type": "component",
+      "component": "shared.footer-code",
+      "repeatable": true
+    },
+    "medical_license": {
+      "type": "string"
+    }
+  }
+}

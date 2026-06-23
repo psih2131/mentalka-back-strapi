@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_home_abouts",
+  "info": {
+    "displayName": "home_about"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "button_text": {
+      "type": "string"
+    },
+    "text_slider": {
+      "type": "component",
+      "component": "shared.home-about-slider-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_shared_home_symptoms",
+  "info": {
+    "displayName": "home_symptoms"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "card_1_title": {
+      "type": "string"
+    },
+    "card_1_subtitle": {
+      "type": "string"
+    },
+    "card_2_title": {
+      "type": "string"
+    },
+    "card_2_subtitle": {
+      "type": "string"
+    },
+    "card_3_title": {
+      "type": "string"
+    },
+    "card_3_subtitle": {
+      "type": "string"
+    },
+    "card_4_title": {
+      "type": "string"
+    },
+    "card_4_subtitle": {
+      "type": "string"
+    },
+    "card_5_title": {
+      "type": "string"
+    },
+    "card_5_subtitle": {
+      "type": "string"
+    },
+    "card_6_title": {
+      "type": "string"
+    },
+    "card_6_subtitle": {
+      "type": "string"
+    },
+    "down_button_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

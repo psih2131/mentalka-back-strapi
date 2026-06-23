@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "socials_widget_components",
+  "info": {
+    "singularName": "socials-widget-component",
+    "pluralName": "socials-widget-components",
+    "displayName": "_socials_widget_component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "socials_media_links": {
+      "type": "component",
+      "component": "shared.socials",
+      "repeatable": true
+    }
+  }
+}

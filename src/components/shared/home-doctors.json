@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_home_doctors",
+  "info": {
+    "displayName": "home_doctors"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "down_text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

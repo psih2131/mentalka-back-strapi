@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_home_advantages",
+  "info": {
+    "displayName": "home_advantages"
+  },
+  "options": {},
+  "attributes": {
+    "section_title": {
+      "type": "string"
+    },
+    "advantages_list": {
+      "type": "component",
+      "component": "shared.home-advantages-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

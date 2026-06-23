@@ -1,0 +1,85 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_homes",
+  "info": {
+    "singularName": "page-home",
+    "pluralName": "page-homes",
+    "displayName": "Page home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "home_hero_section": {
+      "type": "component",
+      "component": "shared.home-hero",
+      "repeatable": false
+    },
+    "home_symptoms_section": {
+      "type": "component",
+      "component": "shared.home-symptoms",
+      "repeatable": false
+    },
+    "home_doctors_section": {
+      "type": "component",
+      "component": "shared.home-doctors",
+      "repeatable": false
+    },
+    "home_banner_section": {
+      "type": "component",
+      "component": "shared.home-banner",
+      "repeatable": false
+    },
+    "home_about_section": {
+      "type": "component",
+      "component": "shared.home-about",
+      "repeatable": false
+    },
+    "home_direction_section": {
+      "type": "component",
+      "component": "shared.home-directions",
+      "repeatable": false
+    },
+    "home_advantages_section": {
+      "type": "component",
+      "component": "shared.home-advantages",
+      "repeatable": false
+    },
+    "home_docs_section": {
+      "type": "component",
+      "component": "shared.home-docs",
+      "repeatable": false
+    },
+    "home_banner_down_section": {
+      "type": "component",
+      "component": "shared.home-banner",
+      "repeatable": false
+    },
+    "home_reviews_section": {
+      "type": "component",
+      "component": "shared.home-reviews",
+      "repeatable": false
+    },
+    "home_faq_section": {
+      "type": "component",
+      "component": "shared.home-faq",
+      "repeatable": false
+    },
+    "home_blog_section": {
+      "type": "component",
+      "component": "shared.home-blog",
+      "repeatable": false
+    },
+    "home_footer_banner_section": {
+      "type": "component",
+      "component": "shared.banner-v1",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_home_docs",
+  "info": {
+    "displayName": "home_docs"
+  },
+  "options": {},
+  "attributes": {
+    "section_slider": {
+      "type": "string"
+    },
+    "docs_images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

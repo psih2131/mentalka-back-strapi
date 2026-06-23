@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_footer_codes",
+  "info": {
+    "displayName": "footer_code"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
